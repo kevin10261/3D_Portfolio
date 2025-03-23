@@ -1,5 +1,6 @@
 {
   "name": "3d_portfolio",
+  "homepage": "https://kevin10261.github.io/3D_Portfolio/",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -7,7 +8,9 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
@@ -15,6 +18,7 @@
     "@react-three/drei": "^10.0.4",
     "@react-three/fiber": "^9.1.0",
     "@tailwindcss/vite": "^4.0.15",
+    "gh-pages": "^6.3.0",
     "prop-types": "^15.8.1",
     "react": "^19.0.0",
     "react-clouds": "^1.0.0",
