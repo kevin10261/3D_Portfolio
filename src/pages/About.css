@@ -1,0 +1,85 @@
+/* Set the background color for the entire page */
+
+  
+  
+  /* The typing effect container */
+  .typing-text {
+    font-size: 3rem; /* Slightly bigger than before */
+    display: inline-block;
+    border-right: 3px solid #fff; /* Simulate cursor */
+    padding-right: 4px;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0;
+    animation: typing 4s steps(30) 1s forwards, blink 0.75s step-end infinite;
+    margin-left: 0; /* Adjust margin to center properly */
+  }
+  
+  /* The gradient effect only for your name */
+  .typing-name {
+    background: linear-gradient(90deg, rgba(138, 43, 226, 1) 0%, rgba(70, 130, 180, 1) 100%); /* Purple to Blue gradient */
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+  
+  
+  .fade-in {
+    animation-delay: 0s; /* Delay the fade-in until after typing effect */
+  }
+  
+  /* Animation for fading in */
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+    }
+  }
+  
+  /* Animation for the typing effect */
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+  
+  /* Animation for the blinking cursor effect */
+  @keyframes blink {
+    50% {
+      border-color: transparent;
+    }
+  }
+  
+  /* Waving animation for the emoji */
+  @keyframes wave {
+    0% {
+      transform: rotate(0deg);
+    }
+    25% {
+      transform: rotate(10deg);
+    }
+    50% {
+      transform: rotate(-10deg);
+    }
+    75% {
+      transform: rotate(10deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+  
+  /* Apply the waving animation to the hand emoji */
+  .typing-name + .emoji {
+    display: inline-block;
+    animation: wave 1s infinite; /* Adjust the speed of the wave */
+  }
+  
+  /* Responsive font size for smaller screens */
+  @media (max-width: 768px) {
+    .typing-text {
+      font-size: 1.5rem; /* Smaller font size on smaller screens */
+    }
+  }
+  
